@@ -12,6 +12,7 @@ import { RegisterComponent } from './page/register/register.component';
 import { MasterComponent } from './crud/master/master.component';
 import { NavComponent } from './crud/nav/nav.component';
 import { UserDetailComponent } from './crud/user-detail/user-detail.component';
+import { UserEditComponent } from './crud/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserDetailComponent } from './crud/user-detail/user-detail.component';
     RegisterComponent,
     MasterComponent,
     NavComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
