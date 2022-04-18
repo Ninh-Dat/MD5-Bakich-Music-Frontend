@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './page/login/login.component';
 import {RegisterComponent} from './page/register/register.component';
-import {NavComponent} from './crud/nav/nav.component';
+import {MasterComponent} from './crud/master/master.component';
+import {UserDetailComponent} from './crud/user-detail/user-detail.component';
 
 const routes: Routes = [
   {
@@ -17,12 +18,20 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-  }
-  ,
+  },
   {
-    path: 'nav',
-    component: NavComponent,
-  }
+    path:'master',
+    component: MasterComponent,
+  },
+  {
+    path: 'users/:id/detail',
+    component: UserDetailComponent,
+  },
+
+  // {
+  //   path: 'nav',
+  //   component: NavComponent,
+  // }
 ];
 
 @NgModule({
