@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(data).subscribe(res => {
       const userLogin = res.user;
       localStorage.setItem('userLogin', JSON.stringify(userLogin));
-      this.router.navigate(['home']);
+      this.router.navigate(['nav']);
     });
   }
 

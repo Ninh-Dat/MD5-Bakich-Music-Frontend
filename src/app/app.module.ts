@@ -9,13 +9,17 @@ import { HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
+import { MasterComponent } from './crud/master/master.component';
+import { NavComponent } from './crud/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MasterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
