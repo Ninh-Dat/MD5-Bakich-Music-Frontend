@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Bakich Music</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+</head>
+<body>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" style="margin-left:420px ; margin-top: 50px">
+      <img src="https://cdn.pixabay.com/photo/2021/05/31/20/04/headsets-6299753_960_720.png" width="200px"
+           height="200px">
+      <p style=" font-size: 40px; font-family: 'Curlz MT'; font-weight: bold">BaKich Music</p>
+    </div>
+  </div>
+  <div class="row">
+    <aside class="col-md-5" style="margin-left: 300px; margin-top: 20px">
+      <div class="card">
+        <article class="card-body">
+          <a routerLink="../register" class="float-right btn btn-outline-primary">Sign up</a>
+          <h4 class="card-title mb-4 mt-1">Sign in</h4>
+          <p>
+            <a href="" class="btn btn-block btn-outline-danger"><i class="fab fa-google"> </i><span
+              style="font-weight: bold"> Login with google</span></a>
+
+          </p>
+          <hr>
+          <form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="Email or login" type="email" formControlName="email">
+              </div> <!-- input-group.// -->
+            </div> <!-- form-group// -->
+            <div *ngIf="f.email.invalid && (f.email.dirty||f.email.touched)">
+              <div *ngIf="f.email.errors">
+                <div *ngIf="f.email.errors.required">
+                  <p style="font-size: 14px; color: red">Email không được để trống</p>
+                </div>
+                <div *ngIf="f.email.errors.email">
+                  <p style="font-size: 14px; color: red">Không đúng định dạng email</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input class="form-control" placeholder="******" type="password" formControlName="password">
+              </div> <!-- input-group.// -->
+            </div> <!-- form-group// -->
+            <div *ngIf="f.password.invalid && (f.password.dirty||f.password.touched)">
+              <div *ngIf="f.password.errors">
+                <div *ngIf="f.password.errors.required">
+                  <p style="font-size: 14px; color: red">Mật khẩu không được để trống</p>
+                </div>
+                <div *ngIf="f.password.errors.minlength">
+                  <p style="font-size: 14px; color: red">Password lớn hơn 6 ký tự</p>
+                </div>
+                <div *ngIf="f.password.errors.maxlength">
+                  <p style="font-size: 14px; color: red">Password nhỏ hơn 8 ký tự </p>
+                </div>
+
+              </div>
+            </div>
+            <div *ngIf="loginForm.valid" class="form-group">
+              <button type="submit" class="btn btn-primary btn-block" > Login</button>
+            </div> <!-- form-group// -->
+            <p class="text-center"><a href="#" class="btn">Forgot password?</a></p>
+          </form>
+        </article>
+      </div> <!-- card.// -->
+
+    </aside> <!-- col.// -->
+  </div> <!-- row.// -->
+
+</div>
+<!--container end.//-->
+
+
+</body>
+</html>
+
+
+
