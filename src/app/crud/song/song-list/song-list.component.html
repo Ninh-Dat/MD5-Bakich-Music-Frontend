@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
-<!--<app-nav></app-nav>-->
+<app-nav></app-nav>
 <div class="container">
   <p style="color: #42AEEC; font-size: 30px;" class="mb-2 mt-3">BÀI HÁT MỚI NHẤT</p>
   <div class="row">
@@ -24,13 +24,13 @@
           <div class="container mt-3 ml-2">
             <div class="row">
               <div class="col-md-6">
-                <p style="font-size: 18px">{{song.name}}
-                  <br><span style="font-size: 14px; color:deepskyblue">{{song.user_id}}</span></p>
+                <a style="font-size: 16px; color:black" routerLink="../songs/{{song.id}}/detail">{{song.name}}</a>
+                  <br><span style="font-size: 14px; color:deepskyblue">{{song.user_id}}</span>
               </div>
               <div class="col-md-6 mt-3">
                 <p style="font-size: 14px; color:darkgray; float: right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
                   <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
-                </svg> 27.544</p>
+                </svg> {{song.like}}</p>
               </div>
             </div>
           </div>

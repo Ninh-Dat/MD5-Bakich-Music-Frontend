@@ -13,5 +13,7 @@ export class SongService {
   getAll(): Observable<any>{
     return this.http.get(environment.api_url + `songs`)
   }
-
+  getById(id:any): Observable<any> {
+    return this.http.get(environment.api_url + `songs/${id}/detail`);
+  }
 }

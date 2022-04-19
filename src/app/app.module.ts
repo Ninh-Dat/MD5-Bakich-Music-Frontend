@@ -15,6 +15,7 @@ import { UserDetailComponent } from './crud/user-detail/user-detail.component';
 import { UserEditComponent } from './crud/user-edit/user-edit.component';
 import { SingerListComponent } from './crud/singer/singer-list/singer-list.component';
 import { SongListComponent } from './crud/song/song-list/song-list.component';
+import { SongDetailComponent } from './crud/song/song-detail/song-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SongListComponent } from './crud/song/song-list/song-list.component';
     UserDetailComponent,
     UserEditComponent,
     SingerListComponent,
-    SongListComponent
+    SongListComponent,
+    SongDetailComponent
   ],
   imports: [
     BrowserModule,
