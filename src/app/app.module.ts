@@ -14,6 +14,7 @@ import { NavComponent } from './crud/nav/nav.component';
 import { UserDetailComponent } from './crud/user-detail/user-detail.component';
 import { UserEditComponent } from './crud/user-edit/user-edit.component';
 import { SingerListComponent } from './crud/singer/singer-list/singer-list.component';
+import { SongListComponent } from './crud/song/song-list/song-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SingerListComponent } from './crud/singer/singer-list/singer-list.compo
     NavComponent,
     UserDetailComponent,
     UserEditComponent,
-    SingerListComponent
+    SingerListComponent,
+    SongListComponent
   ],
   imports: [
     BrowserModule,
