@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+<app-nav></app-nav>
+<div class="container">
+  <h3 style="text-align: center" class="mb-2 mt-3">Danh sách các ca sĩ</h3>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Tên ca sĩ</th>
+      <th scope="col">giới tính</th>
+      <th scope="col">ngay sinh</th>
+      <th colspan="3">dòng nhạc</th>
+      <th colspan="3">Ban nhạc</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let singer of singers, index as i">
+      <th>{{i + 1}}</th>
+      <td>{{singer.name}}</td>
+      <td>{{singer.gender}}</td>
+      <td>{{singer.date_of_birth}}</td>
+      <td>{{singer.category_id}}</td>
+      <td>{{singer.gender}}</td>
+      <td>{{singer.band}}</td>
+    </tr>
+<!--      <td><a routerLink="/books/edit/{{book.id}}" class="btn btn-success">Edit</a></td>-->
+<!--      <td><a routerLink="/books/detail/{{book.id}}" class="btn btn-info">Detail</a></td>-->
+<!--      <td><button (click)=  "delete(book.id)" class="btn btn-danger">Delete</button></td>-->
+
+    </tbody>
+  </table>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
+
