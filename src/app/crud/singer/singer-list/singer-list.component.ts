@@ -12,11 +12,10 @@ export class SingerListComponent implements OnInit {
   // @ts-ignore
   singers;
   // @ts-ignore
-  users;
-  id = this.route.snapshot.paramMap.get('id');
+
   constructor(private singer: SingerService,
               private route: ActivatedRoute,
-              private userService: UserService) {
+              ) {
   }
 
   ngOnInit(): void {
@@ -29,9 +28,4 @@ export class SingerListComponent implements OnInit {
     });
   }
 
-  getUserById(id: string | null) {
-    this.userService.getById(id).subscribe(user => {
-      this.users = user;
-    });
-  }
 }

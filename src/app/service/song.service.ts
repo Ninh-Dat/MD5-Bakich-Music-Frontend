@@ -16,4 +16,9 @@ export class SongService {
   getById(id:any): Observable<any> {
     return this.http.get(environment.api_url + `songs/${id}/detail`);
   }
+
+  getTopView(): Observable<any> {
+    return this.http.get(environment.api_url + `songs/topview`);
+  }
+
 }

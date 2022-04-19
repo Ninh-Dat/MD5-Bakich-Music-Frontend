@@ -9,71 +9,7 @@
 </head>
 <body>
 <app-nav></app-nav>
-<!--<nav class="navbar navbar-expand-lg navbar-light mt-2 navbar-fixed-top">-->
-<!--  <div class="container-md">-->
-<!--    <a class="navbar-brand" href="#">Navbar</a>-->
-<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSupportedContent"-->
-<!--            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--      <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
 
-<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--      <ul class="navbar-nav mr-auto" style="font-size: 18px;">-->
-<!--        <li class="nav-item active">-->
-<!--          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
-<!--        </li>-->
-<!--        <li class="nav-item active">-->
-<!--          <a class="nav-link" href="#">Bài hát <span class="sr-only">(current)</span></a>-->
-<!--        </li>-->
-<!--        <li class="nav-item active">-->
-<!--          <a class="nav-link" routerLink="../categories">Thể loại <span class="sr-only">(current)</span></a>-->
-<!--        </li>-->
-<!--        <li ngbDropdown  class="nav-item dropdown">-->
-<!--          <a ngbDropdownToggle class="nav-link dropdown-toggle"  role="button"-->
-<!--             data-toggle="dropdown" aria-expanded="false">-->
-<!--            Thể loại-->
-<!--          </a>-->
-<!--          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--            <a ngbDropdownItem class="dropdown-item">Nhạc trẻ</a>-->
-<!--            <a ngbDropdownItem class="dropdown-item" href="#">Nhạc vàng</a>-->
-<!--            <a ngbDropdownItem class="dropdown-item" href="#">Nhạc trữ tình</a>-->
-<!--            <a ngbDropdownItem class="dropdown-item" href="#">Nhạc cách mạng</a>-->
-<!--            <a ngbDropdownItem class="dropdown-item" href="#">Nhạc đám cưới</a>-->
-<!--          </div>-->
-<!--        </li>-->
-
-<!--      </ul>-->
-
-<!--      <form *ngIf="formSearch" [formGroup]="formSearch" class="form-inline my-2 my-lg-0">-->
-<!--        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-
-<!--        <ul class="navbar-nav mr-auto" style="font-size: 18px;">-->
-<!--          <li ngbDropdown  class="nav-item dropdown">-->
-<!--            <a ngbDropdownToggle class="nav-link dropdown-toggle"  role="button"-->
-<!--               data-toggle="dropdown" aria-expanded="false">-->
-<!--              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"-->
-<!--                   class="bi bi-person-circle" viewBox="0 0 16 16">-->
-<!--                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>-->
-<!--                <path fill-rule="evenodd"-->
-<!--                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>-->
-<!--              </svg>-->
-<!--              {{userLogin.name}}-->
-<!--            </a>-->
-<!--            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--              <a ngbDropdownItem class="dropdown-item" routerLink="../users/{{userLogin.id}}/detail">Tài khoản</a>-->
-<!--              <a ngbDropdownItem class="dropdown-item" href="#">Another action</a>-->
-<!--              <div class="dropdown-divider"></div>-->
-<!--              <a ngbDropdownItem class="dropdown-item" (click)="getUserLogout()">Logout</a>-->
-<!--            </div>-->
-<!--          </li>-->
-
-<!--        </ul>-->
-<!--      </form>-->
-
-<!--    </div>-->
-<!--  </div>-->
-<!--</nav>-->
 
 <div class="container">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -119,35 +55,40 @@
     </a>
   </div>
 </div>
+
 <div class="container">
   <div class="row">
     <div class="col-md-9">
-      <p style="color: deepskyblue; font-size: 45px" class="mt-2">Bài hát mới nhất</p>
       <div class="row">
-        <div class="col-md-3">
-          <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-               height="200px">
-          <p>Yêu em rất nhiều</p>
-        </div>
-        <div class="col-md-3">
-          <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-               height="200px">
-          <p>Yêu em rất nhiều</p>
-        </div>
-        <div class="col-md-3">
-          <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-               height="200px">
-          <p>Yêu em rất nhiều</p>
-        </div>
-        <div class="col-md-3">
-          <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-               height="200px">
-          <p>Yêu em rất nhiều</p>
+        <p style="color: deepskyblue ; font-size: 30px" class="mb-2 mt-3">CA SĨ NỔI BẬT</p>
+        <div class="row">
+          <div class="col-md-3" >
+            <table style="width: 100%; border-spacing: 20px" >
+              <tr >
+                <td>   <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
+                            height="200px"></td>
+                <td>   <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
+                            height="200px"></td>
+                <td>   <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
+                            height="200px"></td>
+                <td>   <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
+                            height="200px"></td>
+              </tr>
+
+              <tr>
+                <td *ngFor="let singer of singers">
+                  <a routerLink="../singers/{{singer.id}}/detail">{{singer.name}}</a>
+                </td>
+              </tr>
+            </table>
+
+
+
+          </div>
         </div>
       </div>
 
-
-      <p style="color: deepskyblue; font-size: 45px" class="mt-2">Bài hát được nghe nhiều nhất</p>
+      <p style="color: deepskyblue; font-size: 30px" class="mt-2">Bài hát được nghe nhiều nhất</p>
       <div class="row">
         <div class="col-md-3">
           <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
@@ -192,12 +133,12 @@
         </div>
       </div>
       <!--                Danh sách bài hát-->
-      <p style="color: deepskyblue; font-size: 45px" class="">Bài hát ></p>
+      <a style="color: deepskyblue; font-size: 30px" routerLink="../songs">Bài hát ></a>
       <div class="row">
-        <div class="col-md-6 ">
+        <div class="col-md-9 " *ngFor="let song of songs">
           <hr class="mt-1 mb-1">
           <div class="row">
-            <div class="col-md-2 mb-1">
+            <div class="col-md-2 mb-0">
               <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
                    height="80px">
             </div>
@@ -205,316 +146,39 @@
               <div class="container mt-3 ml-2">
                 <div class="row">
                   <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
+                    <a style="font-size: 16px; color:black" routerLink="../songs/{{song.id}}/detail">{{song.name}}</a>
+                    <br><span style="font-size: 14px; color:deepskyblue">{{song.user_id}}</span>
                   </div>
                   <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
+                    <p style="font-size: 14px; color:darkgray; float: right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+                      <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                    </svg> {{song.like}}</p>
                   </div>
                 </div>
               </div>
 
             </div>
           </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
 
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
         </div>
-        <div class="col-md-6 ">
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
 
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mt-1 mb-1">
-          <div class="row">
-            <div class="col-md-2 mb-1">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
-                   height="80px">
-            </div>
-            <div class="col-md-10">
-              <div class="container mt-3 ml-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <p style="font-size: 18px">Tên bài hát
-                      <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-                  </div>
-                  <div class="col-md-6 mt-3">
-                    <p style="font-size: 16px; color:deepskyblue; float: right">Lượt like</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3" >
       <p style="color: deepskyblue; font-size: 45px" class="mt-2">BXH Bài hát</p>
-      <hr class="mt-1 mb-1">
-      <div class="row">
-        <div class="col-md-2 mt-1">
-          <p style="font-size: 40px; color: red">1</p>
+
+      <div class="row" *ngFor="let song of songTop , index as i">
+        <hr class="mt-1 mb-1" >
+        <div class="col-md-2 mt-1" >
+          <p style="font-size: 25px; color: red">{{i + 1}}</p>
         </div>
         <div class="col-md-10 mt-1">
-          <p style="font-size: 18px">Tên bài hát
-            <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
+          <p style="font-size: 18px">{{song.name}}</p>
+           <p> <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
         </div>
       </div>
-      <hr class="mt-0 mb-1">
-      <div class="row">
-        <div class="col-md-2">
-          <p class="mt-2" style="font-size: 35px; color: darkcyan">2</p>
-        </div>
-        <div class="col-md-10 mt-2">
-          <p style="font-size: 18px">Tên bài hát
-            <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-        </div>
-      </div>
-      <hr class="mt-1 mb-1">
-      <div class="row">
-        <div class="col-md-2">
-          <p class="mt-2" style="font-size: 30px; color: chocolate">3</p>
-        </div>
-        <div class="col-md-10 mt-2">
-          <p style="font-size: 18px">Tên bài hát
-            <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-        </div>
-      </div>
-      <hr class="mt-1 mb-1">
-      <div class="row">
-        <div class="col-md-2">
-          <p class="mt-2" style="font-size: 25px; color: darkgray">4</p>
-        </div>
-        <div class="col-md-10 mt-2">
-          <p style="font-size: 18px">Tên bài hát
-            <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-        </div>
-      </div>
-      <hr class="mt-1 mb-1">
-      <div class="row">
-        <div class="col-md-2">
-          <p class="mt-2" style="font-size: 25px; color: darkgray">5</p>
-        </div>
-        <div class="col-md-10 mt-2">
-          <p style="font-size: 18px">Tên bài hát
-            <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-        </div>
-      </div>
-      <hr class="mt-1 mb-1">
-      <div class="row">
-        <div class="col-md-2">
-          <p class="mt-2" style="font-size: 25px; color: darkgray">6</p>
-        </div>
-        <div class="col-md-10 mt-2">
-          <p style="font-size: 18px">Tên bài hát
-            <br><span style="font-size: 16px; color:deepskyblue">Tên ca sỹ</span></p>
-        </div>
-      </div>
+
 
       <!--            Chủ để-->
       <p style="color: deepskyblue; font-size: 40px" class="mt-2">Chủ đề hot ></p>
