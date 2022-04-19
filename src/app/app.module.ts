@@ -16,6 +16,9 @@ import { UserEditComponent } from './crud/user-edit/user-edit.component';
 import { SingerListComponent } from './crud/singer/singer-list/singer-list.component';
 import { SongListComponent } from './crud/song/song-list/song-list.component';
 import { SongDetailComponent } from './crud/song/song-detail/song-detail.component';
+import { SingerDetailComponent } from './crud/singer/singer-detail/singer-detail.component';
+import {NgxAudioPlayerModule} from 'ngx-audio-player';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { SongDetailComponent } from './crud/song/song-detail/song-detail.compone
     UserEditComponent,
     SingerListComponent,
     SongListComponent,
-    SongDetailComponent
+    SongDetailComponent,
+    SingerDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { SongDetailComponent } from './crud/song/song-detail/song-detail.compone
     HttpClientModule,
     NgbModule,
 
+    BrowserAnimationsModule,
+    NgxAudioPlayerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
