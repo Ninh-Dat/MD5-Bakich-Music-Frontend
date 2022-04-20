@@ -19,12 +19,13 @@ export class MasterComponent implements OnInit {
   // users: any;
   // @ts-ignore
   singers;
-  singgers: any;
+
 
   songs: any;
 
   songTop: any;
   topLike: any;
+  topNew: any;
   id = this.route.snapshot.paramMap.get('id');
   constructor(private fb: FormBuilder,
               private route: ActivatedRoute,
@@ -37,12 +38,11 @@ export class MasterComponent implements OnInit {
     this.formSearch = this.fb.group({
       search: [''],
     });
-
     this.getSingerAll();
     this.getSongAll();
     this.getTopView();
     this.getTopLike();
-    this.getSingerById(this.id);
+    this.getTopNew();
   }
 
 
@@ -71,10 +71,10 @@ export class MasterComponent implements OnInit {
       this.topLike = song
     })
   }
-
-  getSingerById(id: any){
-    this.singerService.getById(id).subscribe(singer => {
-      this.singgers = singer;
+  //Bài hát mới nhất
+  getTopNew(){
+    this.songService.getTopNew().subscribe(song =>{
+      this.topNew = song
     })
   }
   // getUserById(id: string | null) {
