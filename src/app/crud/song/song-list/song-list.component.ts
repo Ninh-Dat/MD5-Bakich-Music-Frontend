@@ -21,6 +21,7 @@ export class SongListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAll()
+    this.getShowAll()
   }
 
 
@@ -40,6 +41,7 @@ export class SongListComponent implements OnInit {
               title: item.name,
               link: item.link,
             description: item.description,
+
             }
         this.msaapPlaylist.push(song)
       })
@@ -49,5 +51,10 @@ export class SongListComponent implements OnInit {
 
   onEnded($event: any) {
 
+  }
+  getShowAll(){
+    this.songService.getAll().subscribe(song =>{
+      this.songs = song;
+    })
   }
 }

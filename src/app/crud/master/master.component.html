@@ -66,21 +66,21 @@
 
       <p style="color: deepskyblue ; font-size: 30px" class="mb-2 mt-3">CA SĨ NỔI BẬT</p>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3"*ngFor="let singer of singers">
           <table style="width: 100%; border-spacing: 20px">
             <tr>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
+              <td><img src="{{singer.avatar}}" alt=" " width="200px"
                        height="200px"></td>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-                       height="200px"></td>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-                       height="200px"></td>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-                       height="200px"></td>
+<!--              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"-->
+<!--                       height="200px"></td>-->
+<!--              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"-->
+<!--                       height="200px"></td>-->
+<!--              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"-->
+<!--                       height="200px"></td>-->
             </tr>
 
             <tr>
-              <td *ngFor="let singer of singers">
+              <td>
                 <a routerLink="../singers/{{singer.id}}/detail">{{singer.name}}</a>
               </td>
             </tr>
@@ -91,20 +91,14 @@
 
       <p style="color: deepskyblue; font-size: 30px" class="mt-2">BÀI HÁT ĐƯỢC LIKE NHIỀU NHẤT</p>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3"  *ngFor="let like of topLike">
           <table style="width: 100%; border-spacing: 20px">
             <tr>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-                       height="200px"></td>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-                       height="200px"></td>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
-                       height="200px"></td>
-              <td><img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
+              <td><img src="{{like.image}}" alt=" " width="200px"
                        height="200px"></td>
             </tr>
             <tr>
-              <td *ngFor="let like of topLike">
+              <td>
                 <a routerLink="../songs/{{like.id}}/detail">{{like.name}}</a>
               </td>
             </tr>
@@ -119,7 +113,7 @@
           <hr class="mt-1 mb-1">
           <div class="row">
             <div class="col-md-2 mb-0">
-              <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
+              <img src="{{new.image}}" width="80px"
                    height="80px">
             </div>
             <div class="col-md-10 ">

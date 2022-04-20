@@ -1,7 +1,7 @@
 
 <app-nav></app-nav>
 <div class="container">
-  <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="true"
+  <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false"
                     muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
                     [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration"
                     [expanded]="true" (trackEnded)="onEnded($event)" [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"

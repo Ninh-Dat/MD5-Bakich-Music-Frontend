@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {SongService} from '../../../service/song.service';
 import {ActivatedRoute} from '@angular/router';
+import {any} from 'codelyzer/util/function';
+
 
 @Component({
   selector: 'app-song-detail',
@@ -15,7 +17,7 @@ export class SongDetailComponent implements OnInit {
   msaapPageSizeOptions = [1,4,6];
   msaapDisplayVolumeControls = true;
   msaapDisplayRepeatControls = true;
-  msaapDisplayArtist = false;
+  msaapDisplayArtist = true;
   msaapDisplayDuration = false;
   msaapDisablePositionSlider = true;
 
@@ -25,7 +27,7 @@ export class SongDetailComponent implements OnInit {
               private  route: ActivatedRoute) { }
   ngOnInit(): void {
     this.getSongById(this.id);
-    this.getSong()
+    this.getSong(this.id)
   }
 
   triggerOnEnded(event: any) {
@@ -40,14 +42,13 @@ export class SongDetailComponent implements OnInit {
     })
   }
 
-  getSong(){
-    this.songService.getTopView().subscribe(song =>{
-      song.forEach((item: any) => {
+  getSong(id: any){
+    this.songService.getById(id).subscribe(song =>{
+      song.forEach((id:any) => {
         let song = {
-          // id: item.id,
-
-          link: item.link,
-
+          id: id,
+          link: id.link,
+          // name: item.name
         }
         this.msaapPlaylist.push(song)
       })
