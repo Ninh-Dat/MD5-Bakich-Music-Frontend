@@ -20,5 +20,8 @@ export class SongService {
   getTopView(): Observable<any> {
     return this.http.get(environment.api_url + `songs/topview`);
   }
+  getTopLike(): Observable<any> {
+    return this.http.get(environment.api_url + `songs/toplike`);
+  }
 
 }
