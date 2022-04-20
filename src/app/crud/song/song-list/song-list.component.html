@@ -1,4 +1,5 @@
 <app-nav></app-nav>
+
 <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="true"
                   muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
                   [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration"
@@ -6,8 +7,41 @@
                   [disablePositionSlider]="msaapDisablePositionSlider"></ngx-audio-player>
 
 
-<div>
+
+
+<div class="container">
+  <p style="color: #42AEEC; font-size: 30px;" class="mb-2 mt-3">DANH SÁCH BÀI HÁT</p>
+  <div class="row">
+    <div class="col-md-9 " *ngFor="let song of songs">
+      <hr class="mt-1 mb-1">
+      <div class="row">
+        <div class="col-md-2 mb-0">
+          <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
+               height="80px">
+        </div>
+        <div class="col-md-10">
+          <div class="container mt-3 ml-2">
+            <div class="row">
+              <div class="col-md-6">
+                <a style="font-size: 16px; color:black" routerLink="../songs/{{song.id}}/detail">{{song.name}}</a>
+                <br><span style="font-size: 14px; color:deepskyblue">{{song.singer}}</span>
+              </div>
+              <div class="col-md-6 mt-3">
+                <p style="font-size: 14px; color:darkgray; float: right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+                  <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                </svg> {{song.like}}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </div>
+
 <!--demo-->
 
 

@@ -19,10 +19,13 @@ export class MasterComponent implements OnInit {
   // users: any;
   // @ts-ignore
   singers;
-  // @ts-ignore
-  songs;
-  // @ts-ignore
-  songTop;
+
+
+  songs: any;
+
+  songTop: any;
+  topLike: any;
+  topNew: any;
   id = this.route.snapshot.paramMap.get('id');
   constructor(private fb: FormBuilder,
               private route: ActivatedRoute,
@@ -35,13 +38,11 @@ export class MasterComponent implements OnInit {
     this.formSearch = this.fb.group({
       search: [''],
     });
-
-    // this.getUserLogin();
-    // this.getUserById(this.id);
     this.getSingerAll();
     this.getSongAll();
     this.getTopView();
-    console.log(this.songs);
+    this.getTopLike();
+    this.getTopNew();
   }
 
 
@@ -51,15 +52,29 @@ export class MasterComponent implements OnInit {
       this.singers= singer
     })
   }
-  // danh sách ca sĩ
+  // danh sách bài hát
   getSongAll(){
     this.songService.getAll().subscribe(song => {
       this.songs = song;
     })
   }
+  //danh sách được nghe nhiều nhất
   getTopView(){
     this.songService.getTopView().subscribe(songs =>{
-      this.songTop = songs
+      this.songTop = songs;
+    })
+  }
+
+  //danh sách được like nhiều nhất
+  getTopLike(){
+    this.songService.getTopLike().subscribe(song =>{
+      this.topLike = song
+    })
+  }
+  //Bài hát mới nhất
+  getTopNew(){
+    this.songService.getTopNew().subscribe(song =>{
+      this.topNew = song
     })
   }
   // getUserById(id: string | null) {

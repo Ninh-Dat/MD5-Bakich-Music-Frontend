@@ -1,22 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-</head>
-<body>
+
 <app-nav></app-nav>
+<div class="container">
+  <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false"
+                    muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
+                    [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration"
+                    [expanded]="true" (trackEnded)="onEnded($event)" [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+                    [disablePositionSlider]="msaapDisablePositionSlider"></ngx-audio-player>
+</div>
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-9">
       <div class="row mt-3">
         <div class="col-md-9">
-          <p style="font-size: 25px">{{songs.name}}-{{songs.singer_id}}
+          <p style="font-size: 25px">{{songs.name}}-{{songs.singer}}
         </div>
         <div class="col-md-3">
           <p style="font-size: 20px; color:darkgray; float: right">
@@ -25,7 +23,7 @@
               <path
                 d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
             </svg>
-            27.544
+            {{songs.view}}
           </p>
         </div>
 
@@ -40,23 +38,16 @@
         </div>
 
         <div class="col-md-9 " style="font-size: 18px">
-          <p><span style="font-weight: bold">Thể hiện:</span> {{songs.singer_id}}</p>
-          <p><span style="font-weight: bold">Sáng tác:</span> {{songs.author_id}}</p>
+          <p><span style="font-weight: bold">Thể hiện:</span> {{songs.singer}}</p>
+          <p><span style="font-weight: bold">Sáng tác:</span> {{songs.author}}</p>
           <p><span style="font-weight: bold">Ngày đăng:</span> {{songs.posting_date}}</p>
         </div>
       <div class="row mt-3">
         <div class="col-md">
-          <p><span style="font-weight: bold">Người đăng:</span> {{songs.user_id}}</p>
+          <p><span style="font-weight: bold">Người đăng:</span> {{songs.user}}</p>
           <p>Lời bài hát {{songs.name}}</p>
-          <p>{{songs.description}}Ngày ta sánh đôi, hạnh phúc nói cườiChỉ mong thế thôi, đến tận cuối cùngTừng giây phút trôi, ánh mắt rạng ngờiCầm tay bước đi, tiếng yêu cất lời.Và anh cám ơn cuộc đời nàyĐã mang em về bên mình để rồiMỗi sớm mai khi thức dậy, anh nói rằng
-
-            Hãy yêu anh và bên anh người nhé!<br>
-
-            Điệp Khúc<br>
-
-            Nắm tay anh thật chặt, giữ tay anh thật lâuHứa với anh một câu sẽ đi trọn tới cuối con đườngĐến khi tim ngừng đập và đôi chân ngừng điVì em yêu ơi xin em hãy cứ tin.Nắm tay nhau thật chặt, giữ tay nhau thật lâuĐể hứa với nhau một câu sẽ đi trọn tới cuối con đườngĐến khi tim ngừng đập và đôi chân ngừng đi
-
-            Thì đôi ta cũng sẽ không xa rời.</p>
+          <p style="color: black">{{songs.description}}
+          </p>
         </div>
 
 
@@ -71,16 +62,4 @@
 
 </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-        crossorigin="anonymous"></script>
-</body>
-</html>
 

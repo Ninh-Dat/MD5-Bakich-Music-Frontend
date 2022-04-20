@@ -9,18 +9,19 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class SingerDetailComponent implements OnInit {
 
+
   // @ts-ignore
   singers;
   id = this.route.snapshot.paramMap.get('id')
-  constructor(private singerServiec: SingerService,
+  constructor(private singerService: SingerService,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getSingerById(this.id)
   }
 
-  getSingerById(id: string | null){
-    this.singerServiec.getById(id).subscribe(singer => {
+  getSingerById(id: any){
+    this.singerService.getById(id).subscribe(singer => {
       this.singers = singer;
     })
   }

@@ -11,9 +11,11 @@
 <body>
 <app-nav></app-nav>
 <div class="container">
-  <p style="color: #42AEEC ; font-size: 30px" class="mb-2 mt-3">Danh sách các ca sĩ</p>
   <div class="row">
-    <div class="col-md-3" >
+
+    <div class="col-md-9" >
+      <p style="color:deepskyblue ; font-size: 30px" class="mb-2 mt-3">DANH SÁCH CÁC CA SỸ</p>
+
       <table style="width: 100%; border-spacing: 20px" >
 
         <tr >
@@ -36,6 +38,26 @@
 
 
 
+    </div>
+    <div class="col-md-3">
+      <p style="color: deepskyblue; font-size: 30px" class="mt-2">BXH Bài hát</p>
+      <div class="row" *ngFor="let song of songTop , index as i">
+        <hr>
+        <div class="col-md-1 ">
+          <p style="font-size: 25px; color:darkgoldenrod">{{i + 1}}</p>
+        </div>
+        <div class="col-md-10">
+          <p ><a style="font-size: 18px;; color:brown" routerLink="../songs/{{song.id}}/detail">{{song.name}}</a>
+            <br><a style="font-size: 16px; color:slategray" routerLink="../singers/{{song.singer_id}}/detail">{{song.singer}}</a>
+            <span style="float: right; font-size: 14px; color: slategray">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                   class="bi bi-headphones" viewBox="0 0 16 16">
+                        <path
+                          d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                      </svg>
+              {{song.view}}</span></p>
+        </div>
+      </div>
     </div>
   </div>
 
