@@ -19,6 +19,7 @@ export class MasterComponent implements OnInit {
   // users: any;
   // @ts-ignore
   singers;
+  singgers: any;
 
   songs: any;
 
@@ -41,6 +42,7 @@ export class MasterComponent implements OnInit {
     this.getSongAll();
     this.getTopView();
     this.getTopLike();
+    this.getSingerById(this.id);
   }
 
 
@@ -58,8 +60,8 @@ export class MasterComponent implements OnInit {
   }
   //danh sách được nghe nhiều nhất
   getTopView(){
-    this.songService.getTopView().subscribe(song =>{
-      this.songTop = song
+    this.songService.getTopView().subscribe(songs =>{
+      this.songTop = songs;
     })
   }
 
@@ -70,6 +72,11 @@ export class MasterComponent implements OnInit {
     })
   }
 
+  getSingerById(id: any){
+    this.singerService.getById(id).subscribe(singer => {
+      this.singgers = singer;
+    })
+  }
   // getUserById(id: string | null) {
   //   this.userService.getById(id).subscribe(user => {
   //     this.users = user;

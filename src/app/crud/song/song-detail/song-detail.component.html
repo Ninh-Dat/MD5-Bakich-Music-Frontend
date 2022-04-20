@@ -16,7 +16,7 @@
     <div class="col-md-9">
       <div class="row mt-3">
         <div class="col-md-9">
-          <p style="font-size: 25px">{{songs.name}}-{{songs.singer_id}}
+          <p style="font-size: 25px">{{songs.name}}-{{songs.singer}}
         </div>
         <div class="col-md-3">
           <p style="font-size: 20px; color:darkgray; float: right">
@@ -25,7 +25,7 @@
               <path
                 d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
             </svg>
-            27.544
+            {{songs.view}}
           </p>
         </div>
 
@@ -40,23 +40,16 @@
         </div>
 
         <div class="col-md-9 " style="font-size: 18px">
-          <p><span style="font-weight: bold">Thể hiện:</span> {{songs.singer_id}}</p>
-          <p><span style="font-weight: bold">Sáng tác:</span> {{songs.author_id}}</p>
+          <p><span style="font-weight: bold">Thể hiện:</span> {{songs.singer}}</p>
+          <p><span style="font-weight: bold">Sáng tác:</span> {{songs.author}}</p>
           <p><span style="font-weight: bold">Ngày đăng:</span> {{songs.posting_date}}</p>
         </div>
       <div class="row mt-3">
         <div class="col-md">
-          <p><span style="font-weight: bold">Người đăng:</span> {{songs.user_id}}</p>
+          <p><span style="font-weight: bold">Người đăng:</span> {{songs.user}}</p>
           <p>Lời bài hát {{songs.name}}</p>
-          <p>{{songs.description}}Ngày ta sánh đôi, hạnh phúc nói cườiChỉ mong thế thôi, đến tận cuối cùngTừng giây phút trôi, ánh mắt rạng ngờiCầm tay bước đi, tiếng yêu cất lời.Và anh cám ơn cuộc đời nàyĐã mang em về bên mình để rồiMỗi sớm mai khi thức dậy, anh nói rằng
-
-            Hãy yêu anh và bên anh người nhé!<br>
-
-            Điệp Khúc<br>
-
-            Nắm tay anh thật chặt, giữ tay anh thật lâuHứa với anh một câu sẽ đi trọn tới cuối con đườngĐến khi tim ngừng đập và đôi chân ngừng điVì em yêu ơi xin em hãy cứ tin.Nắm tay nhau thật chặt, giữ tay nhau thật lâuĐể hứa với nhau một câu sẽ đi trọn tới cuối con đườngĐến khi tim ngừng đập và đôi chân ngừng đi
-
-            Thì đôi ta cũng sẽ không xa rời.</p>
+          <p style="color: black">{{songs.description}}
+          </p>
         </div>
 
 

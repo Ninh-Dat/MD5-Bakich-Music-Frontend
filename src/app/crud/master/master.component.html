@@ -131,7 +131,7 @@
               <div class="row">
                 <div class="col-md-6 mt-3">
                   <p><a style="font-size: 16px; color:black" routerLink="../songs/{{like.id}}/detail">{{like.name}}</a>
-                    <br><a routerLink="../singers/{{like.id}}/detail" style="font-size: 14px; color:deepskyblue">{{like.singer}}</a></p>
+                    <br><a routerLink="../singers/{{like.singer_id}}/detail" style="font-size: 14px; color:deepskyblue">{{like.singer}}</a></p>
                 </div>
                 <div class="col-md-6 mt-4">
                   <span style="font-size: 14px; color:darkgray; float: right" >
@@ -154,22 +154,23 @@
 <!--    bên trái-->
     <div class="col-md-3">
       <p style="color: deepskyblue; font-size: 30px" class="mt-2">BXH Bài hát</p>
-      <div class="row" *ngFor="let song of songTop , index as i">
+      <div class="row" *ngFor="let songs of songTop , index as i">
         <hr>
         <div class="col-md-1 ">
           <p style="font-size: 25px; color:darkgoldenrod">{{i + 1}}</p>
         </div>
         <div class="col-md-10">
 
-          <p ><a style="font-size: 18px;; color:brown" routerLink="../songs/{{song.id}}/detail">{{song.name}}</a>
-            <br><a style="font-size: 16px; color:slategray" routerLink="../singers/{{song.id}}/detail">{{song.singer}}</a>
+          <p ><a style="font-size: 18px;; color:brown" routerLink="/songs/{{songs.id}}/detail">{{songs.name}}</a>
+            <br>
+            <a style="font-size: 16px; color:slategray" routerLink="../singers/{{songs.singer_id}}/detail">{{songs.singer}}</a>
             <span style="float: right; font-size: 14px; color: slategray">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                                                                      class="bi bi-headphones" viewBox="0 0 16 16">
                         <path
                           d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
                       </svg>
-              {{song.view}}</span></p>
+              {{songs.view}}</span></p>
         </div>
       </div>
 
