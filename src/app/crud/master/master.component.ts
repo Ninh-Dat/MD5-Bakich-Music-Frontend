@@ -36,8 +36,6 @@ export class MasterComponent implements OnInit {
       search: [''],
     });
 
-    // this.getUserLogin();
-    // this.getUserById(this.id);
     this.getSingerAll();
     this.getSongAll();
     this.getTopView();
@@ -51,17 +49,20 @@ export class MasterComponent implements OnInit {
       this.singers= singer
     })
   }
-  // danh sách ca sĩ
+  // danh sách bài hát
   getSongAll(){
     this.songService.getAll().subscribe(song => {
       this.songs = song;
     })
   }
+  //danh sách được nghe nhiều nhất
   getTopView(){
     this.songService.getTopView().subscribe(songs =>{
       this.songTop = songs
     })
   }
+
+  //danh sách được like nhiều nhất
   // getUserById(id: string | null) {
   //   this.userService.getById(id).subscribe(user => {
   //     this.users = user;
