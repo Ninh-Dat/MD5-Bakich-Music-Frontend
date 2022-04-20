@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {SongService} from '../../../service/song.service';
-import { Track } from 'ngx-audio-player';
 @Component({
   selector: 'app-song-list',
   templateUrl: './song-list.component.html',

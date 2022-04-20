@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
@@ -17,8 +16,15 @@ import { SingerListComponent } from './crud/singer/singer-list/singer-list.compo
 import { SongListComponent } from './crud/song/song-list/song-list.component';
 import { SongDetailComponent } from './crud/song/song-detail/song-detail.component';
 import { SingerDetailComponent } from './crud/singer/singer-detail/singer-detail.component';
-import {NgxAudioPlayerModule} from 'ngx-audio-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxAudioPlayerModule } from "ngx-audio-player";
+import { HttpClientModule} from '@angular/common/http';
+import { SongCreateComponent } from './crud/song/song-create/song-create.component';
+import {environment} from '../environments/environment';
+
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireModule} from "@angular/fire/compat";
+
 
 @NgModule({
   declarations: [
@@ -33,17 +39,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SingerListComponent,
     SongListComponent,
     SongDetailComponent,
-    SingerDetailComponent
+    SingerDetailComponent,
+    SongCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule,
-
     BrowserAnimationsModule,
+    NgbModule,
     NgxAudioPlayerModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
