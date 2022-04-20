@@ -14,4 +14,7 @@ export class SingerService {
   getAll(): Observable<any> {
     return this.http.get(environment.api_url + `singers`)
   }
+  getById(id:any): Observable<any> {
+    return this.http.get(environment.api_url + `singers/${id}/detail`);
+  }
 }
