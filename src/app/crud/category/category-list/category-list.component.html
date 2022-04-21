@@ -1,0 +1,21 @@
+<app-nav></app-nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <p style="color: deepskyblue; font-size: 45px" class="mt-2">Danh sách thể loại</p>
+      <div class="row-md-6 mt-3" >
+        <div class="col-md-3">
+          <div id="menu" *ngFor=" let category of categories">
+            <ul>
+              <li><a routerLink="/categories/{{category.id}}/detail"> {{category.name}}</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

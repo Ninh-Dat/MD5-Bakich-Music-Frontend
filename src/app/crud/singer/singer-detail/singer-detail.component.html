@@ -1,38 +1,89 @@
-
 <app-nav></app-nav>
-<div style=" width: 100%; height: 400px; background: slategray" >
-  <div class="container">
-    <div class="row" >
 
-      <div class="col-md-2">
-        <div class="mt-5" >
+
+
+<div style=" width: 100%; height: 350px; background: slategray">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="mt-5">
           <img style="border-radius: 50%; " src="{{singers.avatar}}" height="150px">
         </div>
         <p style="font-weight: bold; font-size: 20px; color: white" class="mt-2 ml-4">{{singers.name}}</p>
-        <div style="font-size: 14px; color: white; margin-left: 20px" >
+        <div style="font-size: 14px; color: white; margin-left: 20px">
           <p>Sinh nhật: {{singers.date_of_birth}}<br>
             Giới tính: {{singers.gender}}<br>
-          Thể loại: {{singers.category}}</p>
+            Thể loại: {{singers.category}}</p>
         </div>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <div class="row">
           <div class="container">
-            <img src="https://photo-cms-baonghean.zadn.vn/w607/Uploaded/2022/tamzshuztnzm/2020_07_21/13fd7c6be01482a9445724ed840b5944_obyy6678514_2172020.jpg" height="400px" width="100%">
+            <img src="{{singers.avatar}}" height="350px" width="100%">
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
 
-<div class="row mt-3" >
+<div class="row mt-3">
   <div class="container">
-    <p style="font-size: 25px; color: chocolate">Tiểu sử {{singers.name}}</p>
-    <p>{{singers.biography}}</p>
+    <div class="row">
+      <div class="col-md-8">
+        <p style="font-size: 25px; color: chocolate">Tiểu sử {{singers.name}}</p>
+        <p>{{singers.biography}}</p>
+      </div>
+      <div class="col-md-4">
+        <p STYLE="font-size: 30px; color: deepskyblue">BÀI HÁT CỦA CA SỸ</p>
+        <div class="row" *ngFor="let songSinger of songs">
+          <div class="col-md-10">
+            <hr class="mt-1 mb-1">
+            <div class="row">
+              <div class="col-md-3 mb-0">
+                <img src="{{songSinger.image}}" width="80px"
+                     height="80px">
+              </div>
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="col-md-9 mt-3">
+                    <p><a style="font-size: 16px; color:black"
+                          routerLink="/songs/{{songSinger.id}}/detail">{{songSinger.name}}</a>
+                      <br><a routerLink="../singers/{{songSinger.singer_id}}/detail"
+                             style="font-size: 14px; color:deepskyblue">{{songSinger.singer}}</a></p>
+                  </div>
+                  <div class="col-md-3   mt-4">
+                          <span style="font-size: 14px; color:darkgray; float: right">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                      class="bi bi-headphones" viewBox="0 0 16 16">
+                                <path
+                                  d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                              </svg>
+                            {{songSinger.view}}
+        </span>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
+
 </div>
+
+
+<app-footer></app-footer>
+
+
 
 
 

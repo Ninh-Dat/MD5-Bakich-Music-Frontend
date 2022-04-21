@@ -17,4 +17,9 @@ export class SingerService {
   getById(id:any): Observable<any> {
     return this.http.get(environment.api_url + `singers/${id}/detail`);
   }
+
+  createSinger(data: any): Observable<any> {
+    return this.http.post(environment.api_url + `singers/create`, data);
+  }
+
 }

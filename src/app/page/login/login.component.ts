@@ -31,12 +31,17 @@ export class LoginComponent implements OnInit {
     const data = this.loginForm.value;
     this.authService.login(data).subscribe(res => {
       const userLogin = res.user;
+
+      localStorage.setItem('userLogin',JSON.stringify(userLogin));
+      this.router.navigate(['master']);
+
       localStorage.setItem('userLogin', JSON.stringify(userLogin));
       if(res.user.role_id == 2){
         this.router.navigate(['master']);
       }else{
         this.router.navigate(['admin']);
       }
+
 
     });
   }

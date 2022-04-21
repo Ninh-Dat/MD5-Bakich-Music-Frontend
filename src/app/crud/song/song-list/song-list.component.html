@@ -1,10 +1,11 @@
 <app-nav></app-nav>
-
-<ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="true"
-                  muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
-                  [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration"
-                  [expanded]="true" (trackEnded)="onEnded($event)" [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
-                  [disablePositionSlider]="msaapDisablePositionSlider"></ngx-audio-player>
+<div class="container">
+  <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="true"
+                    muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
+                    [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration"
+                    [expanded]="true" (trackEnded)="onEnded($event)" [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+                    [disablePositionSlider]="msaapDisablePositionSlider"></ngx-audio-player>
+</div>
 
 
 
@@ -15,16 +16,16 @@
     <div class="col-md-9 " *ngFor="let song of songs">
       <hr class="mt-1 mb-1">
       <div class="row">
-        <div class="col-md-2 mb-0">
-          <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" width="80px"
+        <div class="col-md-1 mb-0">
+          <img src="{{song.image}}" width="80px"
                height="80px">
         </div>
-        <div class="col-md-10">
-          <div class="container mt-3 ml-2">
+        <div class="col-md-11 ">
+          <div class="container mt-3">
             <div class="row">
               <div class="col-md-6">
                 <a style="font-size: 16px; color:black" routerLink="../songs/{{song.id}}/detail">{{song.name}}</a>
-                <br><span style="font-size: 14px; color:deepskyblue">{{song.singer}}</span>
+                <br><span style="font-size: 14px; color:deepskyblue" routerLink="../singers/{{song.singer_id}}/detail">{{song.singer}}</span>
               </div>
               <div class="col-md-6 mt-3">
                 <p style="font-size: 14px; color:darkgray; float: right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
@@ -41,7 +42,7 @@
 
   </div>
 </div>
-
+<app-footer></app-footer>
 <!--demo-->
 
 

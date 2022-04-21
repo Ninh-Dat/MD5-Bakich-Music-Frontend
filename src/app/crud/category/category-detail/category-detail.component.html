@@ -1,0 +1,59 @@
+<app-nav></app-nav>
+<div class="container mt-3" >
+  <p style="color: deepskyblue; font-size: 30px" class="mt-2">THÔNG TIN THỂ LOẠI</p>
+  <div class="row">
+    <div class="row-md-3">
+      <img src="https://luv.vn/wp-content/uploads/2021/08/hinh-anh-gai-xinh-11.jpg" alt=" " width="200px"
+           height="200px">
+      <h3 class="mt-2">{{category.name}}</h3>
+    </div>
+    <div class="col-md-9 ml-3">
+      <h3 style="color:darkgray ; font-size: 25px" class="mt-1">Chi tiết thể loại</h3>
+      <div style="font-size: 18px">
+
+        <p> <span style="font-weight: bold">Tên thể loại:</span> {{category.name}}</p>
+        <p> <span style="font-weight: bold">Mổ tả:</span>{{category.description}} Ở Việt Nam, nét văn hóa nghe nhạc này đang dần hình thành rõ rệt. Nhiều báo cáo cho thấy trung bình một người trẻ nghe nhiều hơn 5 thể loại nhạc. Trong thời đại thị trường nhạc số lên ngôi, các thể loại nhạc cũng dần có xu hướng pha trộn lẫn nhau </p>
+      </div>
+      <button class="btn btn-warning" routerLink="/categories">Back ></button>
+    </div>
+
+  </div>
+
+
+  <p STYLE="font-size: 30px; color: deepskyblue ">Bài hát của thể loại {{category.name}}</p>
+  <div class="row" *ngFor="let song of songs">
+    <div class="col-md-10">
+      <hr class="mt-1 mb-1">
+      <div class="row">
+        <div class="col-md-2 mb-0">
+          <img src="{{song.image}}" width="80px"
+               height="80px">
+        </div>
+        <div class="col-md-10 ">
+          <div class="row">
+            <div class="col-md-6 mt-3">
+              <p><a style="font-size: 16px; color:black" routerLink="/songs/{{song.id}}/detail">{{song.name}}</a>
+                <br><a routerLink="/singers/{{song.singer_id}}/detail"
+                       style="font-size: 14px; color:deepskyblue">{{song.singer}}</a></p>
+            </div>
+            <div class="col-md-6 mt-4">
+                  <span style="font-size: 14px; color:darkgray; float: right">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-headphones" viewBox="0 0 16 16">
+                        <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+                      </svg> {{song.view}}
+</span>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--<div style="margin-top: 340px">-->
+  <app-footer></app-footer>
+<!--</div>-->
