@@ -10,9 +10,14 @@ import {SongListComponent} from './crud/song/song-list/song-list.component';
 import {SongDetailComponent} from './crud/song/song-detail/song-detail.component';
 import {SingerListComponent} from './crud/singer/singer-list/singer-list.component';
 import {SingerDetailComponent} from './crud/singer/singer-detail/singer-detail.component';
+
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
 import {CategoryDetailComponent} from './crud/category/category-detail/category-detail.component';
 import {SingerCreateComponent} from './crud/singer-create/singer-create.component';
+
+import {AdminComponent} from "./admin/admin.component";
+import {UserListComponent} from "./admin/user-list/user-list.component";
+
 
 const routes: Routes = [
   {
@@ -55,6 +60,7 @@ const routes: Routes = [
     path: 'songs/:id/detail',
     component: SongDetailComponent,
   },
+
   {
     path: 'categories',
     component: CategoryListComponent,
@@ -67,6 +73,20 @@ const routes: Routes = [
     path: 'singers/create',
     component: SingerCreateComponent,
   }
+
+
+  {
+    path: 'admin',
+    component: AdminComponent,
+  },
+
+  {
+    path: 'user-list',
+    component: UserListComponent,
+  },
+
+
+
 ];
 
 @NgModule({
