@@ -1,4 +1,11 @@
 <app-nav></app-nav>
+
+<div class="container">
+  <input class=" mr-sm-2" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="keyword" name="keyword" >
+  <button class="btn btn-outline-success my-2 my-sm-0"  (click)="search()">Search</button>
+</div>
+
+
 <div class="container">
   <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="true"
                     muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
