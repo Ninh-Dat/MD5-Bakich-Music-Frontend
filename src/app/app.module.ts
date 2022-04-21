@@ -49,14 +49,13 @@ import { UserListComponent } from './admin/user-list/user-list.component';
     CategoryListComponent,
     CategoryDetailComponent,
     SingerCreateComponent,
-<<<<<<< HEAD
+
     SongCreateComponent,
-=======
+
 
     AdminComponent,
     UserListComponent
 
->>>>>>> 409e397f956810c99a31dcfbab7ca4e11fe95302
   ],
   imports: [
     BrowserModule,
