@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
@@ -27,6 +27,7 @@ import { SingerCreateComponent } from './crud/singer-create/singer-create.compon
 
 import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
+import {AuthInterceptor} from "./_helpers/auth.interceptor";
 
 
 @NgModule({
@@ -63,7 +64,9 @@ import { UserListComponent } from './admin/user-list/user-list.component';
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
