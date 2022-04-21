@@ -30,6 +30,14 @@ import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
 import {AuthInterceptor} from "./_helpers/auth.interceptor";
 
+// import { AngularFireModule } from "@angular/fire";
+import { environment } from 'src/environments/environment';
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireModule} from "@angular/fire/compat";
+// import {environment} from "../environments/environment";
+
+
+
 
 @NgModule({
   declarations: [
@@ -52,8 +60,6 @@ import {AuthInterceptor} from "./_helpers/auth.interceptor";
     SingerCreateComponent,
 
     SongCreateComponent,
-
-
     AdminComponent,
     UserListComponent
 
@@ -67,6 +73,10 @@ import {AuthInterceptor} from "./_helpers/auth.interceptor";
 
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
+
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, "cloud")
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
