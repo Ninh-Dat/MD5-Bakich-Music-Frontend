@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {UserService} from '../../service/user.service';
 import {User} from '../../user';
+import {CategoryService} from '../../service/category.service';
 
 @Component({
   selector: 'app-nav',
@@ -17,9 +18,12 @@ export class NavComponent implements OnInit {
 
   // @ts-ignore
   users;
+
+  categories: any
   id = this.route.snapshot.paramMap.get('id');
   constructor(private fb: FormBuilder,
               private  userService: UserService,
+              private categoryService: CategoryService,
               private route: ActivatedRoute,
               private router: Router) { }
   ngOnInit(): void {
@@ -28,11 +32,19 @@ export class NavComponent implements OnInit {
     });
     this.getUserLogin();
     this.getUserById(this.id);
+    this.getAllCategory();
   }
   getUserById(id: string | null) {
     this.userService.getById(id).subscribe((user) => {
       this.users = user;
     });
+  }
+
+  getAllCategory(){
+    this.categoryService.getAll().subscribe(category => {
+      this.categories = category
+    })
+
   }
 
   getUserLogin(){
