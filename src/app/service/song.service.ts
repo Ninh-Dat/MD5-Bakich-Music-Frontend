@@ -34,4 +34,8 @@ export class SongService {
   getSongByCategory(id:any): Observable<any>{
     return this.http.get(environment.api_url + `songs/${id}/category`)
   }
+
+  songCreate(data: any){
+    return this.http.post(environment.api_url + `songs/create`, data);
+  }
 }
