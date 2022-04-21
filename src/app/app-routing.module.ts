@@ -72,7 +72,7 @@ const routes: Routes = [
   {
     path: 'singers/create',
     component: SingerCreateComponent,
-  }
+  },
 
 
   {
