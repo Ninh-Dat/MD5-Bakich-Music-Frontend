@@ -77,9 +77,7 @@ const routes: Routes = [
   {
     path: 'songs/create',
     component: SongCreateComponent,
-  }
-
-
+  },
   {
     path: 'admin',
     component: AdminComponent,
