@@ -19,6 +19,7 @@ import { SongDetailComponent } from './crud/song/song-detail/song-detail.compone
 import { SingerDetailComponent } from './crud/singer/singer-detail/singer-detail.component';
 import {NgxAudioPlayerModule} from 'ngx-audio-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './crud/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SingerListComponent,
     SongListComponent,
     SongDetailComponent,
-    SingerDetailComponent
+    SingerDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
