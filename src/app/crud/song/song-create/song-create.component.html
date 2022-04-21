@@ -1,0 +1,48 @@
+<app-nav></app-nav>
+<div class="container">
+  <form [formGroup]="songForm" (ngSubmit)="createSong()">
+    <div class="form-group">
+      <label>Tên bài hát</label>
+      <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label>Thể loại</label>
+      <select class="form-control" formControlName="category_id">
+        <option *ngFor="let category of categories" value="{{category.id}}">{{category.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Ca sỹ</label>
+      <select class="form-control" formControlName="singer_id">
+        <option *ngFor="let singer of singers" value="{{singer.id}}">{{singer.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Người đăng</label>
+      <select class="form-control" formControlName="user_id">
+        <option *ngFor="let user of users" value="{{user.id}}">{{user.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Tác giả</label>
+      <select class="form-control" formControlName="author_id">
+        <option *ngFor="let author of authors" value="{{author.id}}">{{author.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Album</label>
+      <select class="form-control" formControlName="album_id">
+        <option *ngFor="let album of albums" value="{{album.id}}">{{album.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Mô tả</label>
+      <input type="text" class="form-control" formControlName="description">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+
+</div>

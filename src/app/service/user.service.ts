@@ -10,6 +10,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+
   getAll(): Observable<any>{
     return this.http.get(environment.api_url + `users`)
   }
