@@ -23,6 +23,7 @@ import { FooterComponent } from './crud/footer/footer.component';
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
 import { CategoryDetailComponent } from './crud/category/category-detail/category-detail.component';
 import { SingerCreateComponent } from './crud/singer/singer-create/singer-create.component';
+import { SongCreateComponent } from './crud/song/song-create/song-create.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { SingerCreateComponent } from './crud/singer/singer-create/singer-create
     CategoryListComponent,
     CategoryDetailComponent,
     SingerCreateComponent,
+    SongCreateComponent,
   ],
   imports: [
     BrowserModule,

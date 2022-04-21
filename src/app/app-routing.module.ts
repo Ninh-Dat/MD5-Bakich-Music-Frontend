@@ -13,6 +13,7 @@ import {SingerDetailComponent} from './crud/singer/singer-detail/singer-detail.c
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
 import {CategoryDetailComponent} from './crud/category/category-detail/category-detail.component';
 import {SingerCreateComponent} from './crud/singer/singer-create/singer-create.component';
+import {SongCreateComponent} from './crud/song/song-create/song-create.component';
 
 const routes: Routes = [
   {
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'singers/create',
     component: SingerCreateComponent,
+  },
+  {
+    path: 'songs/create',
+    component: SongCreateComponent,
   }
 ];
 

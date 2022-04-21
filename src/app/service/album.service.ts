@@ -6,15 +6,11 @@ import {environment} from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class AlbumService {
 
   constructor(private http: HttpClient) { }
 
-
-  getById(id:any): Observable<any> {
-    return this.http.get(environment.api_url + `users/${id}/detail`);
-  }
-  updateUser(id: any, data: string): Observable<any>{
-    return this.http.put(environment.api_url + `users/${id}/update`, data);
+  getAll(): Observable<any>{
+    return this.http.get(environment.api_url + 'albums');
   }
 }
