@@ -12,7 +12,7 @@ import {SingerListComponent} from './crud/singer/singer-list/singer-list.compone
 import {SingerDetailComponent} from './crud/singer/singer-detail/singer-detail.component';
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
 import {CategoryDetailComponent} from './crud/category/category-detail/category-detail.component';
-import {SingerCreateComponent} from './crud/singer-create/singer-create.component';
+import {SingerCreateComponent} from './crud/singer/singer-create/singer-create.component';
 
 const routes: Routes = [
   {
