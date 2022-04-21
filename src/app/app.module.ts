@@ -49,7 +49,9 @@ import { UserListComponent } from './admin/user-list/user-list.component';
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
