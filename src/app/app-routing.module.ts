@@ -11,6 +11,7 @@ import {SongDetailComponent} from './crud/song/song-detail/song-detail.component
 import {SingerListComponent} from './crud/singer/singer-list/singer-list.component';
 import {SingerDetailComponent} from './crud/singer/singer-detail/singer-detail.component';
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
+import {CategoryDetailComponent} from './crud/category/category-detail/category-detail.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path: 'categories',
     component: CategoryListComponent,
+  },
+  {
+    path: 'categories/:id/detail',
+    component: CategoryDetailComponent
   }
 ];
 

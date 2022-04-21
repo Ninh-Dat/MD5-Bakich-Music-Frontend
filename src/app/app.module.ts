@@ -21,6 +21,7 @@ import {NgxAudioPlayerModule} from 'ngx-audio-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './crud/footer/footer.component';
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
+import { CategoryDetailComponent } from './crud/category/category-detail/category-detail.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {CategoryListComponent} from './crud/category/category-list/category-list
     SingerDetailComponent,
     FooterComponent,
     CategoryListComponent,
+    CategoryDetailComponent,
   ],
   imports: [
     BrowserModule,

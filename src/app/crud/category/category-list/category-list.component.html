@@ -7,7 +7,7 @@
         <div class="col-md-3">
           <div id="menu" *ngFor=" let category of categories">
             <ul>
-              <li><a > {{category.name}}</a></li>
+              <li><a routerLink="/categories/{{category.id}}/detail"> {{category.name}}</a></li>
             </ul>
           </div>
 
