@@ -19,11 +19,16 @@ import { SongDetailComponent } from './crud/song/song-detail/song-detail.compone
 import { SingerDetailComponent } from './crud/singer/singer-detail/singer-detail.component';
 import {NgxAudioPlayerModule} from 'ngx-audio-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FooterComponent } from './crud/footer/footer.component';
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
 import { CategoryDetailComponent } from './crud/category/category-detail/category-detail.component';
 import { SingerCreateComponent } from './crud/singer/singer-create/singer-create.component';
 import { SongCreateComponent } from './crud/song/song-create/song-create.component';
+
+import { AdminComponent } from './admin/admin.component';
+import { UserListComponent } from './admin/user-list/user-list.component';
+
 
 @NgModule({
   declarations: [
@@ -39,11 +44,19 @@ import { SongCreateComponent } from './crud/song/song-create/song-create.compone
     SongListComponent,
     SongDetailComponent,
     SingerDetailComponent,
+
     FooterComponent,
     CategoryListComponent,
     CategoryDetailComponent,
     SingerCreateComponent,
+<<<<<<< HEAD
     SongCreateComponent,
+=======
+
+    AdminComponent,
+    UserListComponent
+
+>>>>>>> 409e397f956810c99a31dcfbab7ca4e11fe95302
   ],
   imports: [
     BrowserModule,
