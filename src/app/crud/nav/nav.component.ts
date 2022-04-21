@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {UserService} from '../../service/user.service';
 import {User} from '../../user';
 import {CategoryService} from '../../service/category.service';
+import {SongService} from '../../service/song.service';
 
 @Component({
   selector: 'app-nav',
@@ -14,18 +15,23 @@ export class NavComponent implements OnInit {
   // @ts-ignore
   formSearch: FormGroup;
   // @ts-ignore
-  userLogin: User
+  userLogin: User;
 
   // @ts-ignore
   users;
+  songs: any;
+  categories: any;
 
-  categories: any
   id = this.route.snapshot.paramMap.get('id');
+
   constructor(private fb: FormBuilder,
-              private  userService: UserService,
+              private userService: UserService,
               private categoryService: CategoryService,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private songService: SongService) {
+  }
+
   ngOnInit(): void {
     this.formSearch = this.fb.group({
       search: [''],
@@ -34,23 +40,26 @@ export class NavComponent implements OnInit {
     this.getUserById(this.id);
     this.getAllCategory();
   }
+
   getUserById(id: string | null) {
     this.userService.getById(id).subscribe((user) => {
       this.users = user;
     });
   }
 
-  getAllCategory(){
+  getAllCategory() {
     this.categoryService.getAll().subscribe(category => {
-      this.categories = category
-    })
+      this.categories = category;
+    });
 
   }
 
-  getUserLogin(){
+  getUserLogin() {
     let data = localStorage.getItem('userLogin');
     // @ts-ignore
     this.userLogin = JSON.parse(data);
   }
+
+
 
 }

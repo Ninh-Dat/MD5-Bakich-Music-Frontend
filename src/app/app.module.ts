@@ -4,8 +4,13 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+
 import {ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
@@ -53,12 +58,10 @@ import {AngularFireModule} from "@angular/fire/compat";
     SongListComponent,
     SongDetailComponent,
     SingerDetailComponent,
-
     FooterComponent,
     CategoryListComponent,
     CategoryDetailComponent,
     SingerCreateComponent,
-
     SongCreateComponent,
     AdminComponent,
     UserListComponent
@@ -74,12 +77,16 @@ import {AngularFireModule} from "@angular/fire/compat";
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
 
+    FormsModule,
+
+
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, "cloud")
 
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+
   ],
   bootstrap: [AppComponent]
 })

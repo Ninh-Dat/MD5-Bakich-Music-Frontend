@@ -20,9 +20,9 @@ export class MasterComponent implements OnInit {
   // @ts-ignore
   singers;
 
-
+  // @ts-ignore
+  keyword: string;
   songs: any;
-
   songTop: any;
   topLike: any;
   topNew: any;
@@ -43,6 +43,7 @@ export class MasterComponent implements OnInit {
     this.getTopView();
     this.getTopLike();
     this.getTopNew();
+    // this.search();
   }
 
 
@@ -76,6 +77,13 @@ export class MasterComponent implements OnInit {
     this.songService.getTopNew().subscribe(song =>{
       this.topNew = song
     })
+  }
+
+  //search
+  search() {
+    this.songService.searchSong(this.keyword).subscribe(res => {
+      this.songs = res;
+    });
   }
   // getUserById(id: string | null) {
   //   this.userService.getById(id).subscribe(user => {

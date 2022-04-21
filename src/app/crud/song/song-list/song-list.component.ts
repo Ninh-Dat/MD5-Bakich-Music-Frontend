@@ -7,6 +7,7 @@ import { Track } from 'ngx-audio-player';
   styleUrls: ['./song-list.component.css']
 })
 export class SongListComponent implements OnInit {
+  keyword: any = [];
   msaapPlaylist: any[] = [];
   songs : any = [];
   msaapDisplayTitle = true;
@@ -56,5 +57,12 @@ export class SongListComponent implements OnInit {
     this.songService.getAll().subscribe(song =>{
       this.songs = song;
     })
+  }
+
+
+  search() {
+    this.songService.searchSong(this.keyword).subscribe(res => {
+      this.songs = res;
+    });
   }
 }

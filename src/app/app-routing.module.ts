@@ -22,7 +22,7 @@ import {UserListComponent} from "./admin/user-list/user-list.component";
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
   },
   {
