@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './crud/footer/footer.component';
 import {CategoryListComponent} from './crud/category/category-list/category-list.component';
 import { CategoryDetailComponent } from './crud/category/category-detail/category-detail.component';
+import { SingerCreateComponent } from './crud/singer-create/singer-create.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CategoryDetailComponent } from './crud/category/category-detail/categor
     FooterComponent,
     CategoryListComponent,
     CategoryDetailComponent,
+    SingerCreateComponent,
   ],
   imports: [
     BrowserModule,
