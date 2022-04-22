@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SongService} from '../../../service/song.service';
 import {Router} from '@angular/router';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {CategoryService} from '../../../service/category.service';
 import {SingerService} from '../../../service/singer.service';
 import {UserService} from '../../../service/user.service';
@@ -22,15 +22,17 @@ export class SongCreateComponent implements OnInit {
   albums: any;
   authors: any;
 
-  songForm: FormGroup = new FormGroup({
-    name: new FormControl(),
-    category_id: new FormControl(),
-    singer_id: new FormControl(),
-    user_id: new FormControl(),
-    album_id: new FormControl(),
-    author_id: new FormControl(),
-    description: new FormControl(),
-  })
+  songForm:any;
+
+  // songForm: FormGroup = new FormGroup({
+  //   name: new FormControl(),
+  //   category_id: new FormControl(),
+  //   singer_id: new FormControl(),
+  //   user_id: new FormControl(),
+  //   album_id: new FormControl(),
+  //   author_id: new FormControl(),
+  //   description: new FormControl(),
+  // })
 
   constructor(private songService: SongService,
               private  router: Router,
@@ -39,9 +41,19 @@ export class SongCreateComponent implements OnInit {
               private userService: UserService,
               private  album: AlbumService,
               private authorService: AuthorService,
-              private toastr: ToastrService,) { }
+              private toastr: ToastrService,
+              private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.songForm = this.fb.group({
+      name: ['', [Validators.required]],
+      category_id: [''],
+      singer_id: [''],
+      user_id: [''],
+      album_id: [''],
+      author_id: [''],
+      description: ['', [Validators.required]],
+    });
     this.getAllCategory();
     this.getAllAlbum();
     this.getAllSinger();
@@ -50,8 +62,8 @@ export class SongCreateComponent implements OnInit {
   }
 
   createSong(){
-    console.log(this.songForm.value)
-    this.songService.songCreate(this.songForm.value).subscribe(()=>{
+    const data = this.songForm.value;
+    this.songService.songCreate(data).subscribe(()=>{
        this.router.navigate(['songs'])
     })
   }
@@ -85,5 +97,10 @@ export class SongCreateComponent implements OnInit {
 
   toartrSong(){
     this.toastr.success('Tọa thành công','Ok')
+  }
+
+  get f() {
+    // @ts-ignore
+    return this.songForm.controls;
   }
 }

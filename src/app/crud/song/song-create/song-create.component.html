@@ -1,10 +1,19 @@
 <app-nav></app-nav>
 <div class="container">
+  <p STYLE="font-size: 30px; color: #1F568B">THÊM MỚI BÀI HÁT</p>
   <form [formGroup]="songForm" (ngSubmit)="createSong()">
     <div class="form-group">
       <label>Tên bài hát</label>
       <input type="text" class="form-control" formControlName="name">
     </div>
+    <div *ngIf="f.name.invalid && (f.name.dirty||f.name.touched)">
+      <div *ngIf="f.name.errors">
+        <div *ngIf="f.name.errors.required">
+          <p style="font-size: 14px; color: red">Không được để trống</p>
+        </div>
+      </div>
+    </div>
+
     <div class="form-group">
       <label>Thể loại</label>
       <select class="form-control" formControlName="category_id">
@@ -42,7 +51,13 @@
       <label>Mô tả</label>
       <input type="text" class="form-control" formControlName="description">
     </div>
-
+    <div *ngIf="f.description.invalid && (f.description.dirty||f.description.touched)">
+      <div *ngIf="f.description.errors">
+        <div *ngIf="f.description.errors.required">
+          <p style="font-size: 14px; color: red">Không được để trống</p>
+        </div>
+      </div>
+    </div>
     <div class="form-group">
       <label>Uploat Image</label>
       <input type="file" class="form-control-file" aria-describedby="emailHelp">
@@ -52,7 +67,10 @@
       <label>Uploat Link</label>
       <input type="file" class="form-control-file"  aria-describedby="emailHelp">
     </div>
+    <div *ngIf="songForm.valid" class="form-group">
     <button class="btn btn-primary" (click)="toartrSong()">Submit</button>
+    </div>
   </form>
 
 </div>
+<app-footer></app-footer>

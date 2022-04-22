@@ -14,6 +14,8 @@ export class SingerListComponent implements OnInit {
   singers;
   // @ts-ignore
   songTop: any;
+
+  keyword: any = [];
   constructor(private singer: SingerService,
               private route: ActivatedRoute,
               private songService: SongService) {
@@ -33,5 +35,11 @@ export class SingerListComponent implements OnInit {
     this.songService.getTopView().subscribe(song =>{
       this.songTop = song
     })
+  }
+
+  search() {
+    this.singer.searchSinger(this.keyword).subscribe(res => {
+      this.singers = res;
+    });
   }
 }
