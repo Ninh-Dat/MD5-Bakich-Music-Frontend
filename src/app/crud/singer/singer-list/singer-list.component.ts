@@ -31,6 +31,7 @@ export class SingerListComponent implements OnInit {
   getAll() {
     this.singer.getAll().subscribe(res => {
       this.singers = res;
+
     });
   }
 

@@ -53,6 +53,8 @@ export class SongCreateComponent implements OnInit {
       album_id: [''],
       author_id: [''],
       description: ['', [Validators.required]],
+      image:[''],
+      link: [''],
     });
     this.getAllCategory();
     this.getAllAlbum();

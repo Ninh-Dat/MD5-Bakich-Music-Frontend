@@ -29,6 +29,7 @@ import { SongCreateComponent } from './crud/song/song-create/song-create.compone
 import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
 import { ToastrModule } from 'ngx-toastr';
+import { SingerUpdateComponent } from './crud/singer/singer-update/singer-update.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ToastrModule } from 'ngx-toastr';
     SingerCreateComponent,
     SongCreateComponent,
     AdminComponent,
-    UserListComponent
+    UserListComponent,
+    SingerUpdateComponent
 
   ],
   imports: [

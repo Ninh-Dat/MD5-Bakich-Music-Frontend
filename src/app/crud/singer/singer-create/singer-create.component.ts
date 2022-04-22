@@ -38,6 +38,7 @@ export class SingerCreateComponent implements OnInit {
       gender: [''],
       date_of_birth: ['',  [Validators.required]],
       biography: ['',  [Validators.required]],
+      avatar: ['',  [Validators.required]],
     });
     this.getAllCategory();
   }

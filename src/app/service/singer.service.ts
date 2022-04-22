@@ -27,4 +27,9 @@ export class SingerService {
   destroy(id: any): Observable<any>{
     return this.http.delete(environment.api_url + `singers/${id}/update`);
   }
+
+  updateSinger(id: any, data: any): Observable<any> {
+    return this.http.put(environment.api_url + `singers/${id}/update`, data);
+  }
+
 }
