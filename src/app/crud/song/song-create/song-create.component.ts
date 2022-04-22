@@ -9,8 +9,8 @@ import { AlbumService } from '../../../service/album.service';
 import { AuthorService } from '../../../service/author.service';
 import { Observable } from 'rxjs';
 
-import { map, finalize } from 'rxjs/operators';
-import { AngularFireStorage } from '@angular/fire/compat/storage';
+// import { map, finalize } from 'rxjs/operators';
+// import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Component({
   selector: 'app-song-create',

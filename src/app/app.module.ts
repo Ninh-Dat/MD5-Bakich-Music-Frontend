@@ -36,9 +36,9 @@ import { UserListComponent } from './admin/user-list/user-list.component';
 import {AuthInterceptor} from "./_helpers/auth.interceptor";
 
 // import { AngularFireModule } from "@angular/fire";
-import { environment } from 'src/environments/environment';
-import {AngularFireStorageModule} from "@angular/fire/compat/storage";
-import {AngularFireModule} from "@angular/fire/compat";
+// import { environment } from 'src/environments/environment';
+// import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+// import {AngularFireModule} from "@angular/fire/compat";
 // import {environment} from "../environments/environment";
 
 
@@ -80,8 +80,8 @@ import {AngularFireModule} from "@angular/fire/compat";
     FormsModule,
 
 
-    AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, "cloud")
+    // AngularFireStorageModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig, "cloud")
 
   ],
   providers: [
