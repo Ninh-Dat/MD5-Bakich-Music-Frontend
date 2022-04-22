@@ -30,6 +30,7 @@ import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SingerUpdateComponent } from './crud/singer/singer-update/singer-update.component';
+import { SongUpdateComponent } from './crud/song/song-update/song-update.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { SingerUpdateComponent } from './crud/singer/singer-update/singer-update
     SongCreateComponent,
     AdminComponent,
     UserListComponent,
-    SingerUpdateComponent
+    SingerUpdateComponent,
+    SongUpdateComponent
 
   ],
   imports: [
