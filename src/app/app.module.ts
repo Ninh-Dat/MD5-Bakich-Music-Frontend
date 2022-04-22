@@ -28,6 +28,7 @@ import { SongCreateComponent } from './crud/song/song-create/song-create.compone
 
 import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -62,6 +63,11 @@ import { UserListComponent } from './admin/user-list/user-list.component';
 
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
+    ToastrModule.forRoot({
+      timeOut: 1050,
+      progressBar:true,
+      progressAnimation: 'increasing'
+    }),
     FormsModule,
   ],
   providers: [],

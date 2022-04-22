@@ -42,7 +42,17 @@
       <label>Mô tả</label>
       <input type="text" class="form-control" formControlName="description">
     </div>
-    <button class="btn btn-primary">Submit</button>
+
+    <div class="form-group">
+      <label>Uploat Image</label>
+      <input type="file" class="form-control-file" aria-describedby="emailHelp">
+    </div>
+
+    <div class="form-group">
+      <label>Uploat Link</label>
+      <input type="file" class="form-control-file"  aria-describedby="emailHelp">
+    </div>
+    <button class="btn btn-primary" (click)="toartrSong()">Submit</button>
   </form>
 
 </div>

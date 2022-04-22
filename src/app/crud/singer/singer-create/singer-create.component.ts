@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {SingerService} from '../../../service/singer.service';
 import {Router} from '@angular/router';
 import {CategoryService} from '../../../service/category.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-singer-create',
@@ -12,32 +13,29 @@ import {CategoryService} from '../../../service/category.service';
 export class SingerCreateComponent implements OnInit {
   categories: any;
   // @ts-ignore
-  // dateTime: Date
+
   singerForm: FormGroup = new FormGroup({
     name: new FormControl(),
     category_id: new FormControl(),
-    // gender: new FormControl(),
-    // date_of_birth: new FormControl(),
+    gender: new FormControl(),
+    date_of_birth: new FormControl(),
     biography: new FormControl(),
-    // information: new FormControl(),
+
 
   });
 
   constructor(private singerService: SingerService,
               private router: Router,
-              private categoryService: CategoryService) {
+              private categoryService: CategoryService,
+              private  toarts: ToastrService) {
   }
 
   ngOnInit(): void {
     this.getAllCategory();
-// this.createSinger()
-    // this.dateTime = new Date()
   }
 
 
   createSinger() {
-    console.log(this.singerForm.value);
-    // return;
     this.singerService.createSinger(this.singerForm.value).subscribe(() => {
       this.router.navigate(['singers']);
     });
@@ -48,5 +46,9 @@ export class SingerCreateComponent implements OnInit {
     this.categoryService.getAll().subscribe(res => {
       this.categories = res;
     });
+  }
+
+  toartrSinger(){
+    this.toarts.success('Tọa thành công','Ok')
   }
 }

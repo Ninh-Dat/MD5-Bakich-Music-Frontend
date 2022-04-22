@@ -7,6 +7,7 @@ import {SingerService} from '../../../service/singer.service';
 import {UserService} from '../../../service/user.service';
 import {AlbumService} from '../../../service/album.service';
 import {AuthorService} from '../../../service/author.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-song-create',
@@ -37,7 +38,8 @@ export class SongCreateComponent implements OnInit {
               private singerService: SingerService,
               private userService: UserService,
               private  album: AlbumService,
-              private authorService: AuthorService) { }
+              private authorService: AuthorService,
+              private toastr: ToastrService,) { }
 
   ngOnInit(): void {
     this.getAllCategory();
@@ -79,5 +81,9 @@ export class SongCreateComponent implements OnInit {
     this.authorService.getALl().subscribe(res=>{
       this.authors = res
     })
+  }
+
+  toartrSong(){
+    this.toastr.success('Tọa thành công','Ok')
   }
 }

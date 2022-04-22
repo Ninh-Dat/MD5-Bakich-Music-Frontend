@@ -21,5 +21,7 @@ export class SingerService {
   createSinger(data: any): Observable<any> {
     return this.http.post(environment.api_url + `singers/create`, data);
   }
-
+  searchSinger(keyword: string): Observable<any>{
+    return this.http.get(environment.api_url + `singers/${keyword}` )
+  }
 }
