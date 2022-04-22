@@ -54,6 +54,7 @@
       <label>Mô tả</label>
       <input type="text" class="form-control" formControlName="description">
     </div>
+
     <div *ngIf="f.description.invalid && (f.description.dirty||f.description.touched)">
       <div *ngIf="f.description.errors">
         <div *ngIf="f.description.errors.required">
@@ -73,6 +74,15 @@
     <div *ngIf="songForm.valid" class="form-group">
     <button class="btn btn-primary"  (click)="toartrSong()">Submit</button>
     </div>
+
+    <div class="form-group col-12">
+      <input type="file"
+      id="file"
+      (change)="onFileSelected($event)"
+      />
+     </div>
+    <button class="btn btn-primary">Submit</button>
+
   </form>
 
 </div>
