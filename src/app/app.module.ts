@@ -33,6 +33,11 @@ import { SongCreateComponent } from './crud/song/song-create/song-create.compone
 
 import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
+
+import { ToastrModule } from 'ngx-toastr';
+import { SingerUpdateComponent } from './crud/singer/singer-update/singer-update.component';
+import { SongUpdateComponent } from './crud/song/song-update/song-update.component';
+
 import {AuthInterceptor} from "./_helpers/auth.interceptor";
 
 // import { AngularFireModule } from "@angular/fire";
@@ -40,6 +45,7 @@ import {AuthInterceptor} from "./_helpers/auth.interceptor";
 // import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 // import {AngularFireModule} from "@angular/fire/compat";
 // import {environment} from "../environments/environment";
+
 
 
 
@@ -64,7 +70,9 @@ import {AuthInterceptor} from "./_helpers/auth.interceptor";
     SingerCreateComponent,
     SongCreateComponent,
     AdminComponent,
-    UserListComponent
+    UserListComponent,
+    SingerUpdateComponent,
+    SongUpdateComponent
 
   ],
   imports: [
@@ -76,6 +84,14 @@ import {AuthInterceptor} from "./_helpers/auth.interceptor";
 
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
+
+    ToastrModule.forRoot({
+      timeOut: 1050,
+      progressBar:true,
+      progressAnimation: 'increasing'
+    }),
+
+
 
     FormsModule,
 

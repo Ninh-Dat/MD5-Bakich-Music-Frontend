@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SongService} from '../../../service/song.service';
 import { Track } from 'ngx-audio-player';
+import {ToastrModule, ToastrService} from 'ngx-toastr';
 @Component({
   selector: 'app-song-list',
   templateUrl: './song-list.component.html',
@@ -18,7 +19,8 @@ export class SongListComponent implements OnInit {
   msaapDisplayArtist = false;
   msaapDisplayDuration = false;
   msaapDisablePositionSlider = true;
-  constructor(private songService: SongService) { }
+  constructor(private songService: SongService,
+             ) { }
 
   ngOnInit(): void {
     this.getAll()
@@ -64,5 +66,15 @@ export class SongListComponent implements OnInit {
     this.songService.searchSong(this.keyword).subscribe(res => {
       this.songs = res;
     });
+  }
+
+
+  deleteSong(id: any) {
+    if (confirm('Are you sure?')) {
+      this.songService.destroy(id).subscribe(() => {
+        this. getShowAll()
+      });
+    }
+
   }
 }

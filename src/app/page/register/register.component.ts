@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {AuthService} from '../../service/auth.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +14,8 @@ export class RegisterComponent implements OnInit {
   formRegister: FormGroup | undefined;
   constructor(private fb: FormBuilder,
               private registerService: AuthService,
-              private router: Router) { }
+              private router: Router,
+              private toastr: ToastrService) { }
 
   ngOnInit() {
     this.formRegister = this.fb.group({
@@ -42,6 +44,10 @@ export class RegisterComponent implements OnInit {
   get f(){
     // @ts-ignore
     return this.formRegister.controls;
+  }
+
+  toars() {
+    this.toastr.success('Đăng ký', 'Đăng ký thành công')
   }
 
   confirmedValidator(controlName: string, matchingControlName: string){

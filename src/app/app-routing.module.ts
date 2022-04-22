@@ -18,6 +18,8 @@ import {SongCreateComponent} from './crud/song/song-create/song-create.component
 
 import {AdminComponent} from "./admin/admin.component";
 import {UserListComponent} from "./admin/user-list/user-list.component";
+import {SingerUpdateComponent} from './crud/singer/singer-update/singer-update.component';
+import {SongUpdateComponent} from './crud/song/song-update/song-update.component';
 
 
 const routes: Routes = [
@@ -87,7 +89,14 @@ const routes: Routes = [
     path: 'user-list',
     component: UserListComponent,
   },
-
+  {
+    path: 'singers/:id/update',
+    component: SingerUpdateComponent,
+  },
+  {
+    path: 'songs/:id/update',
+    component: SongUpdateComponent,
+  }
 
 
 ];

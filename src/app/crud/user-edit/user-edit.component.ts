@@ -25,6 +25,7 @@ export class UserEditComponent implements OnInit {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       // @ts-ignore
       this.ids = +paramMap.get('ids');
+      // @ts-ignore
       this.getById(this.id);
     });
 
