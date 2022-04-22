@@ -41,4 +41,7 @@ export class SongService {
   searchSong(keyword: string): Observable<any>{
     return this.http.get(environment.api_url + `songs/${keyword}` )
   }
+  destroy(id: any): Observable<any>{
+    return this.http.delete(environment.api_url + `songs/${id}/delete`);
+  }
 }

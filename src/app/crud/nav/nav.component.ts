@@ -60,6 +60,8 @@ export class NavComponent implements OnInit {
     this.userLogin = JSON.parse(data);
   }
 
-
+  getUserLogout(){
+    this.router.navigate(['login'])
+  }
 
 }

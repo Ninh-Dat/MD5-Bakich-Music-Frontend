@@ -69,4 +69,12 @@ export class SongListComponent implements OnInit {
   }
 
 
+  deleteSong(id: any) {
+    if (confirm('Are you sure?')) {
+      this.songService.destroy(id).subscribe(() => {
+        this. getShowAll()
+      });
+    }
+
+  }
 }

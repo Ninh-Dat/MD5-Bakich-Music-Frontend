@@ -24,4 +24,7 @@ export class SingerService {
   searchSinger(keyword: string): Observable<any>{
     return this.http.get(environment.api_url + `singers/${keyword}` )
   }
+  destroy(id: any): Observable<any>{
+    return this.http.delete(environment.api_url + `singers/${id}/update`);
+  }
 }
