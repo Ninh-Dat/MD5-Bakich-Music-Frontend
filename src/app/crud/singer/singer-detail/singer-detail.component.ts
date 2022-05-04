@@ -11,6 +11,15 @@ import {SongService} from '../../../service/song.service';
 export class SingerDetailComponent implements OnInit {
 
 
+  msaapPlaylist: any[] = [];
+  msaapDisplayTitle = true;
+  msaapDisplayPlayList = true;
+  msaapPageSizeOptions = [2,4,6];
+  msaapDisplayVolumeControls = true;
+  msaapDisplayRepeatControls = true;
+  msaapDisplayArtist = false;
+  msaapDisplayDuration = false;
+  msaapDisablePositionSlider = true;
   // @ts-ignore
   singers;
   songs:any
@@ -22,6 +31,7 @@ export class SingerDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getSingerById(this.id)
     this.getSongByIdSinger(this.id)
+    this.getAll(this.id)
   }
 
   getSingerById(id: any){
@@ -33,5 +43,34 @@ export class SingerDetailComponent implements OnInit {
     this.songService.getSongBySinger(id).subscribe(song => {
       this.songs = song;
     })
+  }
+
+  triggerOnEnded(event: any) {
+    console.log('ended');
+  }
+
+
+
+// Material Style Advance Audio Player Playlist
+
+
+  getAll(id:any){
+    this.songService.getSongBySinger(id).subscribe(res => {
+      res.forEach((item: any) => {
+        let song = {
+          id: item.id,
+          title: item.name,
+          link: item.link,
+          description: item.description,
+
+        }
+        this.msaapPlaylist.push(song)
+      })
+
+    })
+  }
+
+  onEnded($event: any) {
+
   }
 }

@@ -25,9 +25,12 @@ export class SongDetailComponent implements OnInit {
   id= this.route.snapshot.paramMap.get('id')
   constructor(private songService:SongService,
               private  route: ActivatedRoute) { }
+
+
   ngOnInit(): void {
-    this.getSongById(this.id);
     this.getSong(this.id)
+    this.getSongById(this.id);
+
   }
 
   triggerOnEnded(event: any) {
@@ -42,13 +45,13 @@ export class SongDetailComponent implements OnInit {
     })
   }
 
-  getSong(id: any){
-    this.songService.getById(id).subscribe(song =>{
-      song.forEach((id:any) => {
+  getSong(id:any){
+    this.songService.getById(id).subscribe(res =>{
+      res.forEach((item: any) => {
         let song = {
-          id: id,
-          link: id.link,
-          // name: item.name
+          id: item.id,
+          link: item.link,
+          name: item.name,
         }
         this.msaapPlaylist.push(song)
       })

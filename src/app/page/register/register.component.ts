@@ -37,6 +37,7 @@ export class RegisterComponent implements OnInit {
     const data = this.formRegister.value;
     this.registerService.register(data).subscribe( res =>{
       const userRegister = res.user;
+      console.log(userRegister);
       localStorage.setItem('userRegister', JSON.stringify(userRegister));
       this.router.navigate(['login']);
     })
