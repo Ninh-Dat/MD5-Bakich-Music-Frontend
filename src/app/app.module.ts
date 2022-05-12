@@ -4,8 +4,12 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+
+
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
@@ -28,9 +32,21 @@ import { SongCreateComponent } from './crud/song/song-create/song-create.compone
 
 import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
+
 import { ToastrModule } from 'ngx-toastr';
 import { SingerUpdateComponent } from './crud/singer/singer-update/singer-update.component';
 import { SongUpdateComponent } from './crud/song/song-update/song-update.component';
+
+import {AuthInterceptor} from "./_helpers/auth.interceptor";
+
+// import { AngularFireModule } from "@angular/fire";
+// import { environment } from 'src/environments/environment';
+// import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+// import {AngularFireModule} from "@angular/fire/compat";
+// import {environment} from "../environments/environment";
+
+
+
 
 
 @NgModule({
@@ -67,14 +83,26 @@ import { SongUpdateComponent } from './crud/song/song-update/song-update.compone
 
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
+
     ToastrModule.forRoot({
       timeOut: 1050,
       progressBar:true,
       progressAnimation: 'increasing'
     }),
+
+
+
     FormsModule,
+
+
+    // AngularFireStorageModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig, "cloud")
+
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
